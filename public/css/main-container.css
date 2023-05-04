@@ -1,0 +1,119 @@
+
+
+.main-container{
+    display: flex;
+    margin-top: 15vh;
+    padding: 1rem 1rem;
+ 
+}
+.main-container .news-container{
+    background-color: rgb(255, 255, 255);
+    width: 30vw;
+    min-width: 20rem;
+    min-height: 40vh;
+    display: flex;
+    flex-direction: column;
+    max-height: min-content;
+    padding-bottom: 1rem;
+    box-shadow: 0 0 10px rgba(102, 102, 102, 0.178);
+    border-radius: 13px ;
+    position: relative;
+}
+.main-container .news-container .news-border{
+    background-color: rgb(29, 201, 132);
+    width: calc(50% - 1rem);
+    height: 2rem;
+    border-radius: 10px 0px 10px 0px;
+    text-align: right;
+    font-family: 'Montserrat';
+    color: rgb(255, 255, 255);
+    font-size: 1.3rem;
+    padding-right: 1rem;
+
+}
+.main-container .news-container::before{
+    content: "";
+    display: block;
+    background-color: rgb(29, 201, 132);
+    width: 52%;
+    height: 1.5rem;
+    position: absolute;
+    border-radius: 0px 10px 0px 0px;
+    top: 0;
+    right: 0%;
+    
+   
+    
+
+}
+.main-container .news-container::after{
+    content: "Conteúdos";
+    font-family: 'Montserrat';
+    padding-left: 1rem;
+    font-weight: 900;
+    font-size: 1.3rem;
+    color: rgb(29, 201, 132);
+    display: block;
+    background-color: rgb(255, 255, 255);
+    width: calc(50% - 1rem);
+    height: 1.5rem;
+    position: absolute;
+    top: 0.6rem;
+    border-radius: 10px 0px 0px 0px;
+    right: 0%;
+   
+}
+ .news-container .news-link li{
+    list-style: none;
+    border-bottom: solid 0.1px rgba(87, 87, 87, 0.144);
+    padding: 0.6rem 2rem;
+    font-family: 'arial';
+    font-weight: 600;
+    color: rgb(65, 65, 65);
+
+}
+
+.body-container{
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.178);
+    min-width: 50vw;
+    width: 60vw;
+    margin-left: 2rem;
+    border-radius: 10px;
+    padding: 2rem;
+}
+.body-container .header{
+    margin-bottom: 2rem;
+}
+.body-container .header h1{
+    font-family: 'Montserrat';
+    font-weight: 900;
+    color: rgb(43, 43, 43);
+    font-size: 2.4rem;
+}
+.body-container .header-cabecalho p{
+    font-family: 'arial';
+    font-size: 0.94rem;
+    margin-top: 1rem;
+}
+.body-container .main-content {
+    margin-top: 5rem;
+}
+.body-container .main-content *{
+    margin-bottom: 1rem;
+    font-family: 'Source Sans Pro';
+}
+.body-container .main-content h2{
+    font-size: 2rem;
+    color: rgb(43, 43, 43);
+    margin-left: 1rem;
+    margin-top: 2rem;
+}
+.body-container .main-content a{
+    color: rgb(20, 158, 103);
+    text-decoration: none;
+}
+.body-container .main-content a:hover{
+    color: rgb(14, 114, 74);
+    text-decoration: underline;
+}

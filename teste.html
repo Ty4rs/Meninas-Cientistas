@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Menu Bar Responsivo</title>
+  <style>
+    /* Estilos para a barra de menu */
+    .menu {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #333;
+      color: #fff;
+      padding: 10px 20px;
+    }
+
+    .menu ul {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .menu li {
+      margin-left: 20px;
+    }
+
+    .menu a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    /* Estilos para o botão de menu */
+    .menu-icon {
+      display: none;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      width: 40px;
+      height: 40px;
+      position: relative;
+    }
+
+    .menu-icon span {
+      position: absolute;
+      background-color: #fff;
+      height: 4px;
+      width: 100%;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: transform 0.3s, background-color 0.3s;
+    }
+
+    .menu-icon span::before,
+    .menu-icon span::after {
+      content: "";
+      position: absolute;
+      background-color: #fff;
+      height: 4px;
+      width: 100%;
+      left: 0;
+      transition: transform 0.3s, background-color 0.3s;
+    }
+
+    .menu-icon span::before {
+      top: -10px;
+    }
+
+    .menu-icon span::after {
+      top: 10px;
+    }
+
+    /* Estilos para mostrar o menu quando o botão de menu é clicado */
+    @media (max-width: 767px) {
+      .menu ul {
+        display: none;
+      }
+
+      .menu-icon {
+        display: block;
+      }
+
+      .menu-icon.active span {
+        background-color: transparent;
+        transform: rotate(45deg);
+      }
+
+      .menu-icon.active span::before {
+        transform: translateY(10px) rotate(90deg);
+      }
+
+      .menu-icon.active span::after {
+        transform: translateY(-10px) rotate(90deg);
+      }
+
+      .menu ul.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #333;
+        width: 100%;
+        padding: 20px;
+        margin: 0;
+      }
+
+      .menu li {
+        margin: 10px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="menu">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Sobre</a></li>
+      <li><a href="#">Serviços</a></li>
+      <li><a href="#">Contato</a></li>
+    </ul>
+    <button class="menu-icon"><span></span></button>
+  </nav>
+
+  <script>
+    const menuIcon = document.querySelector('.menu-icon');
+    const menu = document.querySelector('.menu ul');
+
+    menuIcon.addEventListener('click', function() {
+      this.classList.toggle('active');
+menu.classList.toggle('active');
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,85 @@
+.main-container{
+    display: flex;
+    margin-top: 15vh;
+    padding: 0;
+
+ 
+}
+.banner{
+    background-image: url("../img/banner.png");
+    background-color: aliceblue;
+    width: 100vw;
+    position: relative;
+    height: 30vw;
+
+    left: 0;
+    top: 15%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.banner p{
+    color: rgb(20, 155, 101);
+    position: absolute;
+    bottom: 2%;
+    width: 45vw;
+    left: 36%;
+    font-size: 1rem;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+.banner a{
+    color: rgb(30, 202, 133);
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4.8vw;
+    position: absolute;
+    left: 8%;
+    top: 15%;
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.089);
+}
+
+.banner a::after{
+    content: "IF MAKER";
+    font-size: 3.2vw;
+    position: absolute;
+    display: block;
+    background-color: rgb(27, 197, 129);
+    background-image: linear-gradient(45deg,rgb(27, 197, 129), #1dae87);
+    color: white;
+    box-shadow: 0 0 14px  rgba(0, 0, 0, 0.116);
+    padding: 0rem 1.4rem;
+    right: 0;
+    border-radius: 10px 0px 10px 0;
+}
+
+
+ .banner a {
+    opacity: 0; /* define a opacidade inicial do texto como 0 */
+    animation: aparecer 1.5s forwards; /* define a animação e a duração da animação */
+  }
+  .banner p{
+    opacity: 0; /* define a opacidade inicial do texto como 0 */
+    animation: aparecerx 1.5s forwards; /* define a animação e a duração da animação */
+  }
+  @keyframes aparecerx {
+    0% {
+      opacity: 0; /* define a opacidade inicial do texto como 0 */
+      transform: translatex(-50px); /* define a posição inicial do texto */
+    }
+    100% {
+      opacity: 1; /* define a opacidade final do texto como 1 */
+      transform: translatex(0); /* define a posição final do texto */
+    }
+  }
+  @keyframes aparecer {
+    0% {
+      opacity: 0; /* define a opacidade inicial do texto como 0 */
+      transform: translateY(50px); /* define a posição inicial do texto */
+    }
+    100% {
+      opacity: 1; /* define a opacidade final do texto como 1 */
+      transform: translateY(0); /* define a posição final do texto */
+    }
+  }
+  
