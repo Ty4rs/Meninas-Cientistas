@@ -28,7 +28,9 @@ z-index: 5;
     display: flex;
     align-items: center;
     text-decoration: none;
+    justify-content: center;
 
+    
 }
 .bar-link li{
     list-style: none;
@@ -37,10 +39,14 @@ z-index: 5;
     color: rgb(56, 55, 68);
     font-weight: 600;
 }
+.bar-link  .link {
 
-a {
-    background-color: red;
+    position: absolute;
+    display: flex;
+    left: 16vw;
+
 }
+
 
 
 .bar-link a .meninas-cientistas-logo{
@@ -55,10 +61,10 @@ a {
     align-items: center;
     justify-content: center;
     font-weight: 600;
-    transition: cubic-bezier(0.165, 0.84, 0.44, 1) .5s;
-    position: absolute;
+    transition: cubic-bezier(0.165, 0.84, 0.44, 1) 0.5s;
+
     min-width: max-content;
-    margin-right: 3rem;
+
 
 }
 .bar-link a{
@@ -68,6 +74,9 @@ a {
 
     margin-left: 2rem;
 }
+.bar-link a:first-child:hover{
+
+}
 .bar-link .meninas-cientistas-logo::after{
     font-family: 'Montserrat', sans-serif;
     content: "IF";
@@ -76,7 +85,7 @@ a {
     color: rgb(29, 201, 132);
     font-size: 3rem;
     font-weight: bolder;
-    transition: cubic-bezier(0.165, 0.84, 0.44, 1) .5s;
+    transition: cubic-bezier(0.165, 0.84, 0.44, 1) 0.5s;
 
     margin-left: 8rem;
     
