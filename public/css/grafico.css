@@ -13,8 +13,18 @@
     grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
-
+    margin-right: 14vw;
     
+
+}
+.graphics-content{
+    display: flex;
+    overflow-x: hidden ;
+    overflow-y: hidden;
+
+    scroll-behavior: smooth;
+    width: calc( 14.8vw *2 + 30.5vw + 9vw  + 4.8rem);
+
 
 }
 
@@ -23,19 +33,20 @@
     background-color: white;
     border-radius: 10px;
     margin: 0rem 0rem 0.4rem 0.4rem;
-    height: 17.9vw;
+    height: 16.0vw;
     display: flex;
     align-items: center;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+
+    
 }
 
-.ind-graphic:nth-child(1) { grid-area: 1 / 1 / 3 / 2; position: absolute; top: 0; bottom: 0; margin: auto; overflow-y: auto;}
-.ind-graphic:nth-child(2) { grid-area: 1 / 2 / 2 / 4;width: 36vw;}
-.ind-graphic:nth-child(3) { grid-area: 2 / 2 / 3 / 4; width: 36vw;}
-.ind-graphic:nth-child(4) { grid-area: 1 / 4 / 2 / 5; }
-.ind-graphic:nth-child(5) { grid-area: 2 / 4 / 3 / 5; }
+.ind-graphic:nth-child(1) { grid-area: 1 / 1 / 3 / 2; position: relative; top: 0;overflow-y: auto; height: calc(100% - 2.4rem); padding: 1rem 0rem 1rem 0rem;}
+.ind-graphic:nth-child(2) { grid-area: 1 / 2 / 2 / 4;width: 34vw;padding: 1rem;}
+.ind-graphic:nth-child(3) { grid-area: 2 / 2 / 3 / 4; width: 34vw;padding: 1rem;}
+.ind-graphic:nth-child(4) { grid-area: 1 / 4 / 2 / 5; padding: 0rem 0rem 2rem 0rem;}
+.ind-graphic:nth-child(5) { grid-area: 2 / 4 / 3 / 5; padding: 0rem 0rem 2rem 0rem;}
 table {
     border-collapse: collapse;
     width: 100%;
@@ -45,6 +56,7 @@ table {
     font-size: 14px;
 
     display: block;
+    
   }
 
 tr td:last-child{
@@ -80,4 +92,62 @@ tr{
     width: 17.9vw;
 
 
+}
+.back{
+    position: absolute;
+    z-index: 1;
+    margin: auto;
+    left: 5vw;
+}
+.next{
+    position: absolute;
+
+
+    z-index: 1;
+    margin: auto;
+    right: 5vw;
+}
+.next, .back{
+    background-color:rgb(85, 197, 122);
+    padding: 0.7rem 1rem;
+    color: white;
+    border-radius: 12px 2px 12px 2px;
+    box-shadow: 3px 3px 3px 0px rgba(41, 41, 41, 0.055);
+    cursor: pointer;
+    text-shadow: 0 0 6px rgba(36, 36, 36, 0.075);
+
+}
+.next:hover, .back:hover{
+    border-radius: 2px 12px 2px 12px;
+    transition: cubic-bezier(.39,.39,0,1.03) 0.6s;
+}
+.back::after{
+    color: white;
+    content: 'arrow_back_ios';
+    transition: cubic-bezier(.39,.39,0,1.03) 0.4s;
+    opacity: 0;
+    position: absolute;
+    left: 30%;
+    font-size: 1rem;
+
+}
+.back:hover::after{
+    font-size: 1.5rem;
+    opacity: 100%;
+    left: 46%;
+}
+.next::after{
+    color: white;
+    content: 'arrow_forward_ios';
+    transition: cubic-bezier(.39,.39,0,1.03) 0.4s;
+    opacity: 0;
+    position: absolute;
+    left: 30%;
+    font-size: 1rem;
+
+}
+.next:hover::after{
+    font-size: 1.5rem;
+    opacity: 100%;
+    left: 46%;
 }

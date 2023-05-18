@@ -58,6 +58,8 @@ var chart = new Chart(ctx, {
 }
 });
 
+
+
 const canvas2 = document.querySelector('#graphic2');
 const ctx2 = canvas2.getContext('2d');
 const data2 = {
@@ -74,7 +76,7 @@ const data2 = {
   // Crie o gráfico de linha
   const myChart2 = new Chart(ctx2, {
 
-    type: 'line',
+    type: 'bar',
     data: data2,
     options: {
       scales: {
@@ -91,22 +93,36 @@ const data3 = {
     datasets: [{
       label: 'Vendas',
       data: [12, 19, 3, 5, 2, 3],
-      borderColor: 'rgb(255, 99, 132)',
+      backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56", "#E7E9ED"],
       tension: 0.1
     }]
   };
   
+
+
   // Crie o gráfico de linha
   const myChart3 = new Chart(ctx3, {
-    type: 'line',
+    type: 'pie',
     data: data3,
     options: {
       scales: {
-        y: {
-          beginAtZero: true
-        }
-      }
-    }
+          x: {
+              grid: {
+                  display: false // oculta a grade do eixo x
+              },
+              ticks: {
+                display: false // oculta os rótulos do eixo x
+            }
+          },
+          y: {
+              grid: {
+                  display: false // oculta a grade do eixo y
+              },
+              ticks: {
+                display: false // oculta os rótulos do eixo x
+            }
+          }
+      }}
   });
   const canvas4 = document.querySelector('#graphic4');
 const ctx4 = canvas4.getContext('2d');
@@ -115,7 +131,7 @@ const data4 = {
     datasets: [{
       label: 'Vendas',
       data: [12, 19, 3, 5, 2, 3],
-      borderColor: 'rgb(255, 99, 132)',
+      backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56", "#E7E9ED"],
       tension: 0.1
     }]
   };
@@ -126,9 +142,69 @@ const data4 = {
     data: data4,
     options: {
       scales: {
-        y: {
-          beginAtZero: true
-        }
-      }
-    }
+          x: {
+              grid: {
+                  display: false // oculta a grade do eixo x
+              },
+              ticks: {
+                display: false, // oculta os rótulos do eixo y
+                drawOnChartArea: false // remove a linha acima dos rótulos do eixo y // oculta os rótulos do eixo x
+            }
+          },
+          y: {
+              grid: {
+                  display: false // oculta a grade do eixo y
+              },
+              ticks: {
+                display: false, // oculta os rótulos do eixo y
+                drawOnChartArea: false // remove a linha acima dos rótulos do eixo y // oculta os rótulos do eixo x
+            }
+          }
+      }}
   });
+  // Obtém o elemento de scroll
+
+var elementoScroll = document.getElementsByClassName("graphics-content")[0];
+
+// Muda a posição horizontal de scroll para 200 pixels
+//elementoScroll.scrollLeft = 1;
+
+var items = document.getElementsByClassName("item")
+var itemsL = 0
+
+items[0].scrollIntoView({
+  inline: "center",
+  behavior: "smooth"
+})
+window.onresize = ()=>{
+  items[itemsL].scrollIntoView({
+    inline: "center",
+    behavior: "smooth"
+  })
+}
+  function aumentar(){
+    if(itemsL < items.length){
+        itemsL++
+    }
+
+    items[itemsL].scrollIntoView({
+        inline: "center",
+        behavior: "smooth"
+    })
+}
+function abaixar(){
+    if(itemsL > 0){
+        itemsL-= 1
+    }
+
+    items[itemsL].scrollIntoView({
+        inline: "center",
+        behavior: "smooth"
+    })
+}
+
+
+document.querySelector(".next").addEventListener("click", ()=>{
+  aumentar()
+})
+
