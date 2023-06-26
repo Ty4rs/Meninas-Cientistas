@@ -1,8 +1,8 @@
 .main-container{
-    display: flex;
-    margin-top: 15vh;
-    padding: 0;
-
+  display: flex;
+  margin-top: 15vh;
+  padding: 0;
+  flex-direction: column;
  
 }
 .banner{
@@ -83,3 +83,70 @@
     }
   }
   
+
+.home-cards{
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+
+  width: 100vw;
+  justify-content: center;
+  padding: 4rem 2rem;
+
+  }
+  .home-cards div{
+    margin-right:1.3rem;
+
+    width: 23%;
+    background-color: rgb(255, 255, 255);
+    padding: 3rem 1.6rem;
+    text-align: center;
+    transform: translateX(-1.9rem);
+    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.123);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  .home-cards div::before{
+    content: " ";
+    display: block;
+    background-color: rgb(27, 197, 129);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0.3rem;
+  }
+  .home-cards div h4{
+    margin-bottom: 0.5rem;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.3rem;
+    color: rgb(48, 48, 48);
+  }
+  .home-cards div p{
+    margin-bottom: 0.5rem;
+    font-family: sans-serif;
+    font-size: 1rem;
+    color: rgb(82, 82, 85);
+    font-weight: 600;
+  }
+  .home-cards div img{
+    width: 6rem;
+    margin-bottom: 1.4rem;
+  }
+  .containner1{
+    padding: 4rem;
+  }
+  .containner1 h2{
+    font-family: sans-serif;
+    width: 60%;
+  }
+  .containner1 .lermais{
+    padding: 0.3rem 1.8rem;
+    display: flex;
+    border-radius: 13px;
+    border: solid 1px rgb(27, 197, 129);
+    font-family: sans-serif;
+    font-weight: 800;
+    color: white;
+    background-color:  rgb(27, 197, 129);
+  }
