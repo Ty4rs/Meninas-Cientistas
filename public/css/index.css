@@ -1,9 +1,18 @@
 .main-container{
+<<<<<<< Updated upstream
   display: flex;
   margin-top: 15vh;
   padding: 0;
   flex-direction: column;
  
+=======
+    display: flex;
+    margin-top: 15vh;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+>>>>>>> Stashed changes
 }
 .banner{
     background-image: url("../img/banner.png");
@@ -17,6 +26,7 @@
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center;
+
 }
 .banner p{
     color: rgb(20, 155, 101);
@@ -53,6 +63,20 @@
     border-radius: 10px 0px 10px 0;
 }
 
+.titulo-content{
+
+  font-family: 'Source Sans Pro';
+  font-weight: 700;
+  padding: 13rem 6rem;
+  font-size: 2.6rem;
+  background-color: #7dfcda4d;
+  background-image: linear-gradient(to bottom,rgb(23, 209, 135), #1dae87);
+  color: white;
+}
+.banner:focus{
+  
+}
+
 
  .banner a {
     opacity: 0; /* define a opacidade inicial do texto como 0 */
@@ -82,6 +106,7 @@
       transform: translateY(0); /* define a posição final do texto */
     }
   }
+<<<<<<< Updated upstream
   
 
 .home-cards{
@@ -150,3 +175,7 @@
     color: white;
     background-color:  rgb(27, 197, 129);
   }
+=======
+
+  
+>>>>>>> Stashed changes
