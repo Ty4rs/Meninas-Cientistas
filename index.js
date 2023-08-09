@@ -1,4 +1,3 @@
-// Captura o elemento que será movido
 const elementoMovel = document.getElementsByClassName('banner')[0]
 const cards = document.getElementsByClassName("home-cards")[0]
 const titulopr = document.getElementsByClassName("titulopr")[0]
@@ -8,7 +7,7 @@ let var1, var2, var3
 
   document.body.scrollY = 0;
   document.documentElement.scrollTop = 0;
-
+  window.scrollTo(0, 0);
 
 // Função para mover o elemento
 function moverElemento() {
@@ -18,19 +17,21 @@ function moverElemento() {
     // Define a nova posição vertical do elemento
   //var novaPosicao = scrollTop ; // Pode ajustar o valor conforme desejado
      var1 =- (window.scrollY/ (window.scrollY + 220) * 14)
-     var2 =- (window.scrollY/ (window.scrollY + 240) * 30)
 
-      var3 += 200
+     var2 =- (window.scrollY/ (window.scrollY + 140) * 34)
 
-     console.log("var3" + var3)
+ 
+      var3 =+ (window.scrollY/ (window.scrollY + 140) * 14)
+
+     console.log("var2" + var2)
      
 
     // Aplica a nova posição ao elemento
     document.getElementsByClassName('banner')[0].style.top =    (var1 - 1.2) + "rem"
-    document.getElementsByClassName("home-cards")[0].style.top =    var2 + "rem"
-    document.getElementsByClassName("titulopr")[0].style.top =    var3 + "rem"
+    document.getElementsByClassName("home-cards")[0].style.top =    (var2 + 1.2)  + "rem"
+    document.getElementsByClassName("titulopr")[0].style.top =    (var3 )  + "rem"
     console.log(document.getElementsByClassName('banner')[0].style.top)
-    console.log(var1)
+    console.log("var3" + var3)
 
 
 
