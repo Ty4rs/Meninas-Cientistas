@@ -5,6 +5,11 @@ const titulopr = document.getElementsByClassName("titulopr")[0]
 
 let var1, var2, var3
 
+
+  document.body.scrollY = 0;
+  document.documentElement.scrollTop = 0;
+
+
 // Função para mover o elemento
 function moverElemento() {
     // Obtém a posição vertical atual do scroll
@@ -14,10 +19,9 @@ function moverElemento() {
   //var novaPosicao = scrollTop ; // Pode ajustar o valor conforme desejado
      var1 =- (window.scrollY/ (window.scrollY + 220) * 14)
      var2 =- (window.scrollY/ (window.scrollY + 240) * 30)
-     if(var3 > -200){
-      var3 =- ((window.scrollY/ (window.scrollY - 500) ) )
-      window.alert("Oi")
-     }
+
+      var3 += 200
+
      console.log("var3" + var3)
      
 
@@ -59,16 +63,17 @@ for (let index = 0; index < document.getElementsByClassName('box').length; index
   // Quando o elemento entra na tela
         //box.style.opacity = 1;
         
+        //box.style.transform = 'translateY(-2rem)'
+        box.style.marginTop = '-4rem'
        
-        box.style.marginTop = "-4rem"
 
       } else {
         
        
   // Quando o elemento sai da tela
         //box.style.opacity = 0;
-        //box.style.transform = 'translateY(+20px)';
-        box.style.marginTop = "1rem"
+        //box.style.transform = 'translateY(2rem)';
+
 
       }
     });
