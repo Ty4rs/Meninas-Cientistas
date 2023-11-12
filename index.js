@@ -10,32 +10,6 @@ let var1, var2, var3
   window.scrollTo(0, 0);
 
 // Função para mover o elemento
-function moverElemento() {
-    // Obtém a posição vertical atual do scroll
-    var scrollTop = window.scrollY;
-
-    // Define a nova posição vertical do elemento
-  //var novaPosicao = scrollTop ; // Pode ajustar o valor conforme desejado
-     var1 =- (window.scrollY/ (window.scrollY + 220) * 14)
-
-     var2 =- (window.scrollY/ (window.scrollY + 140) * 34)
-
- 
-      var3 =+ (window.scrollY/ (window.scrollY + 140) * 14)
-
-     console.log("var2" + var2)
-     
-
-    // Aplica a nova posição ao elemento
-    document.getElementsByClassName('banner')[0].style.top =    (var1 - 1.2) + "rem"
-    document.getElementsByClassName("home-cards")[0].style.top =    (var2 + 1.2)  + "rem"
-    document.getElementsByClassName("titulopr")[0].style.top =    (var3 )  + "rem"
-    console.log(document.getElementsByClassName('banner')[0].style.top)
-    console.log("var3" + var3)
-
-
-
-}
 
 
 
